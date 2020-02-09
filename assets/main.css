@@ -84,15 +84,15 @@ img {
 	list-style: none;
 }
 .page-section-current-text{
-	color: #318f50;
+	color: #31888f;
 	font-weight: bold;
 	text-align: center;
 	margin-top:20px;
 }
 .page-section-current{
-	background-color: #d9edf7;
-	border-color: #bce8f1;
-	color:#31708f;
+	background-color: #d9f7e5;
+	border-color: #bcf1ea;
+	color:#318f81;
 }
 /*About section*/
 blockquote{
