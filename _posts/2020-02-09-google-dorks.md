@@ -1,6 +1,6 @@
 ---
 title: Google Dorks
-categories: Information gathering
+categories: Information-gathering
 date: 2020-02-09 
 author: shiva G prasadh
 published: true
@@ -8,11 +8,10 @@ published: true
  
 We all know that Google is incredibly popular search engine for years in the world. Searching in Google is an art. For normal people, Its just a search engine. But Google has advanced search options. In the hacking world, Google is a powerful hacking tool; the so called as Google Dorks also known as Google hacking or Google dorking. We can find vulnerable servers and web applications by using it. Let's learn some tricks in the face of ethical hacking.
 
-``` 
+
 ## [](#header-2) Caution: 
 This blog is strictly for educational purpose. In case of any illegal actions done with reference to this blog, you are fully responsible.
- 
-``` 
+
   
 ## [](#header-2) Google Cache
  
@@ -21,8 +20,7 @@ This dork will show you the cached version of any website.
 ```E.g. cache:zattackerhub.com```
  
 Lets look some popular Google dork operators
-
-``` 
+ 
 allintext: Searches for specific text contained on any web page.  e.g. allintext: hacking tools
 * * *
 allintitle: Searches for web pages that contained titles. e.g. allintitle: “zattacker hub”
@@ -39,7 +37,7 @@ site:  It limits the scope of a query to single website. e.g. site: zattacker.ga
 * * *
 inanchor: this is useful when you need to search for an exact anchor text used on any links, e.g. inanchor:"ethical hacking"
 * * *
-```
+
 Now, we have some basic understanding of Google dorks. Lets see query syntax. The following is the high level structure of Google Dorks that targets a specifi domain.
 “inurl:domain.com/” “additional dorks”
 
