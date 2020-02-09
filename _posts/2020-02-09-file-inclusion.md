@@ -1,8 +1,6 @@
 ---
 title: Local file inclusion & remote file inclusion
 categories: Vulnerabilities
-desc:"Understanding Arbitrary file access, Local file inclusion & remote file inclusion"
-excerpt: Sometime you might be confused when you think about the difference between Arbitrary file access, Local file inclusion and Remote file inclusion attacks. Lets discuss about the differences. 
 date: 2020-02-09 
 author: shiva G prasadh
 published: true
