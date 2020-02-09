@@ -93,7 +93,7 @@ Protect yourself:
 User-agent: *   
 Disallow: / 
 ```
-    Make sure Google is blocked from all sensitive directories.
+   Make sure Google is blocked from all sensitive directories.
 
 *   Avoid to uploading sensitive information online. 
 *   Encrypt your sensitive data
