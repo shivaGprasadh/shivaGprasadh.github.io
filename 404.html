@@ -1,0 +1,25 @@
+---
+layout: default
+title: "Error - 404 - Page Not Found"
+---
+<div class="navbar navbar-default navbar-static-top" role="navigation">
+  <div class="container">
+    {% include navbar_header.html %}
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="{{ site.baseurl }}/index.html">About</a></li>
+        <li><a href="{{ site.baseurl }}/blog/">Blog</a></li>
+        <!-- <li><a href="{{ site.baseurl }}/cv.html">CV</a></li> -->
+      </ul>
+      {% include navbar_social_icons.html %}
+    </div><!-- /.nav-collapse -->
+  </div> <!-- /.container -->
+</div>
+<div class="container" id="page-content">
+  <div class="jumbotron text-center" style="margin-bottom: 600px;">
+    <h1>Oops! 404 - Not Found!</h1>
+    <p class="lead"><a href="{{ site.data.props.mainurl }}{{ site.baseurl }}">Click here to go back to the home page</a></p>
+    <div id="wb404" />
+  </div>
+</div>
+<script src="https://archive.org/web/wb404.js"> </script>

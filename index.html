@@ -1,0 +1,82 @@
+---
+layout: default
+title: About
+---
+<div class="navbar navbar-default navbar-static-top" role="navigation">
+  <div class="container">
+    {% include navbar_header.html %}
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">About</a></li>
+        <li><a href="{{ site.baseurl }}/blog/">Blog</a></li>
+        <!-- <li><a href="{{ site.baseurl }}/cv.html">CV</a></li> -->
+      </ul>
+      {% include navbar_social_icons.html %}
+    </div><!-- /.nav-collapse -->
+  </div> <!-- /.container -->
+</div>
+<div class="container" id="page-content">
+  <div class="row">
+    <div class="col-sm-10" id="page-body">
+      <!-- About section -->
+      <div class="container-fluid page-section" id="about" name="about">
+        <h2 id="index-about-header">Hi, I'm shiva G prasadh</h2>
+        <p class="lead text-center" id="index-about-body">
+          {{ site.data.index.about_description }}
+        </p>
+        <p class="lead text-center">
+          <!-- <img src="https://i.imgur.com/vzIv71rl.jpg" height="150" width="150" class="img-rounded" /> -->
+          {{ site.data.index.about_oneliner }}
+        </p>
+        <!-- <blockquote class="blockquote-reverse">
+          <p>
+            {{ site.data.index.about_quote }}
+          </p>
+          <footer>{{ site.data.index.about_quote_by }}</footer>
+        </blockquote> -->
+      </div> <!-- End of about section-->
+      <hr />
+      <!-- Reading section -->
+     
+      <hr />
+      <!-- Writing section -->
+      
+      <hr />
+      <!-- Code section -->
+     
+      <hr />
+      <!-- Learning Section -->
+      
+      <hr />
+      <!-- Contact section -->
+      <div class="container-fluid page-section" id="contact" name="contact">
+        <h2>Connect</h2>
+        <!-- Social icons -->
+        <div class="col-sm-6 col-sm-offset-3">
+          <p></p>
+          <ul class="list-inline" id="index-contact-social-list">
+            <li><a href="https://www.instagram.com/shiva_g_prasadh/" target="_blank" ><span class="fa fa-instagram fa-3x index-contact-social" data-toggle="tooltip" data-placement="bottom" title="Instagram"></span></a></li>
+            <li><a href="http://twitter.com/shivaGprasadh" target="_blank"><span class="fa fa-twitter fa-3x index-contact-social" data-toggle="tooltip" data-placement="bottom" title="Twitter @shivaGprasadh"></span></a></li>
+            <li><a href="https://www.linkedin.com/in/sivaprasath-gajendran-679aaaa8" target="_blank" ><span class="fa fa-linkedin fa-3x index-contact-social" data-toggle="tooltip" data-placement="bottom" title="LinkedIn"></span></a></li>
+            <li><a href="http://github.com/shivaGprasadh/" target="_blank"><span class="fa fa-github-alt fa-3x index-contact-social" data-toggle="tooltip" data-placement="bottom" title="Github - shivaGprasadh"></span></a></li>
+                    
+          </ul>
+        </div>
+        <!-- Contact Form -->
+       
+    </div> <!-- End of #page-body -->
+
+    <div class="col-sm-2 hidden-xs">
+      <div class="affix" id="page-sidebar">
+        <ul class="nav nav-stacked">
+          <li><a href="#about">About me</a></li>
+          <li><a href="#read">Read</a></li>
+          <li><a href="#write">Write</a></li>
+          <li><a href="#code">Code</a></li>
+          <li><a href="#learn">Learn</a></li>
+          <li><a href="#contact">Connect</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

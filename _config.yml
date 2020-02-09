@@ -1,0 +1,9 @@
+baseurl: 
+paginate: 12
+paginate_path: /blog/page/:num
+permalink: /blog/:title/
+timezone: Asia/Kolkata
+gems: 
+ - jekyll-redirect-from
+ - jekyll-gist
+ - jekyll-paginate

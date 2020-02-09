@@ -1,0 +1,29 @@
+---
+layout: blog
+title: Archives - Blog
+---
+<!-- Archive header icons and text -->
+<h2 class="text-muted" id="archive-header">
+	<i class="fa fa-archive"></i>&nbsp;<a href="{{ site.baseurl }}/blog/archive/" id="archive-header-button">Archive</a>
+	<span id="archive-category-header">&nbsp; >> &nbsp; 
+		<span class="fa fa-folder-open"></span>&nbsp;
+		<a id="archive-category-name"></a>
+	</span>
+</h2>
+
+<!-- Archive posts content -->
+{% for post in site.posts %}
+	<div class="archive-post-wrap" data-category="{% for category in post.categories %}{{ category }} {% endfor %}">
+		<h4 class="archive-post-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h4>
+		<div class="row archive-post-metadata text-muted">
+		  <p class="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-left archive-post-date">
+		  	<i class="fa fa-calendar"></i> {{ post.date | date: "%d %B %Y" }}
+		  </p>
+		  <p class="col-xs-12 col-sm-12 col-md-8 col-lg-8 text-right archive-post-categories">
+				{% for category in post.categories %}
+					<span class="fa fa-folder-open"></span> <a href="{{ site.baseurl }}/blog/archive/#{{ category }}" class="archive-post-categories-single" data-category="{{ category }}"> {{ category }} </a> &nbsp;
+				{% endfor %}	
+		  </p>
+		</div>
+	</div>
+{% endfor %}

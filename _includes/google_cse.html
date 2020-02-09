@@ -1,0 +1,27 @@
+<div id="google-cse-code">
+	<script>
+	  (function() {
+	    var cx = '{{ site.data.props.google_cse }}';
+	    var gcse = document.createElement('script');
+	    gcse.type = 'text/javascript';
+	    gcse.async = true;
+	    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+	        '//www.google.com/cse/cse.js?cx=' + cx;
+	    var s = document.getElementsByTagName('script')[0];
+	    s.parentNode.insertBefore(gcse, s);
+	  })();
+	</script>
+	<div style="width:0px;overflow:hidden;height:0px;"> 
+		<gcse:search></gcse:search>
+	</div>
+	<form role="form" id="searchbox_{{ site.data.props.google_cse }}" action="">
+		<div class="input-group">
+      <input value="{{ site.data.props.google_cse }}" name="cx" type="hidden"/>
+	    <input value="FORID:11" name="cof" type="hidden"/>
+	    <input class="form-control" type="text" id="q" style="" name="q">
+      <span class="input-group-btn">
+        <button class="btn"><span class="fa fa-search"></span></button>
+      </span>
+    </div>
+	</form>
+</div>

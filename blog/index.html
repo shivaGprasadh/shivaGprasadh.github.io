@@ -1,0 +1,55 @@
+---
+layout: blog
+title: Blog
+redirect_from: "/"
+---
+<!-- Pagination output per page -->
+{% for post in paginator.posts %}
+  <div class="archive-post-wrap">
+    <!-- Title -->
+    <h3 class="archive-post-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+    <!-- Date and categories -->
+    <div class="row archive-post-metadata text-muted">
+      <p class="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-left archive-post-date">
+      	<i class="fa fa-calendar"></i> {{ post.date | date: "%d %B %Y" }}
+      </p>
+      <p class="col-xs-12 col-sm-12 col-md-8 col-lg-8 text-right archive-post-categories">
+  			{% for category in post.categories %}
+  				<span class="fa fa-folder-open"></span> <a href="{{ site.baseurl }}/blog/archive/#{{ category }}"> {{ category }} </a> &nbsp;
+  			{% endfor %}
+      </p>
+  	</div>
+    <!-- Post excerpt -->
+    <div class="archive-post-content text-justify">
+      {% assign descsize = post.desc.size %}
+      {% if descsize > 0 %}
+        {{ post.desc }}
+      {% else %}
+        {{ post.excerpt }}
+      {% endif %}
+    </div>
+  </div>
+  <hr class="archive-post-separator" />
+{% endfor %}
+
+<!-- Pagination buttons -->
+{% if paginator.total_pages > 1 %}
+<div class="archive-pagination">
+<ul class="pager">
+  <!-- Previous button -->
+  {% if paginator.previous_page %}
+    <li><a href="{{ paginator.previous_page_path | prepend: site.baseurl/blog | replace: '//', '/' }}">Prev</a></li>
+  {% else %}
+    
+  {% endif %}
+  <!-- Current page number -->
+  <span class="page_number">&nbsp; {{ paginator.page }} of {{ paginator.total_pages }} &nbsp;</span>
+  <!-- Next button -->
+  {% if paginator.next_page %}
+    <li><a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next</a></li>
+  {% else %}
+    
+  {% endif %}
+</ul>  
+</div>
+{% endif %}

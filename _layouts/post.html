@@ -1,0 +1,33 @@
+---
+layout: blog
+---
+<!-- Post date and categories -->
+<div class="row archive-post-metadata text-muted" id="post-date-categories">
+  <p class="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-left archive-post-date">
+  	<i class="fa fa-calendar"></i> {{ page.date | date: "%d %B %Y" }}
+  </p>
+  <p class="col-xs-12 col-sm-12 col-md-8 col-lg-8 text-right archive-post-categories">
+		{% for category in page.categories %}
+			<span class="fa fa-folder-open"></span> <a href="{{ site.baseurl }}/blog/archive/#{{ category }}"> {{ category }} </a> &nbsp;
+		{% endfor %}	
+  </p>
+</div>
+<div id="post-content-wrap">
+	<!-- Post title and contents -->
+	<h1> {{ page.title }} </h1>
+	<div id="post-content" class="text-justify">
+		{{ content }}
+	</div>
+	<hr />
+	<!-- Share buttons -->
+	<div class="text-center" id="post-share-buttons">
+		<h4 class="text-muted">Share on</h4>
+		<p>
+			<a href="https://plus.google.com/share?url={{ site.data.props.mainurl }}{{site.baseurl}}{{page.url}}" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Share on Google+"><span class="fa fa-2x fa-google-plus-square"></span></a>&nbsp;&nbsp;
+			<a href="https://twitter.com/share?url={{ site.data.props.mainurl }}{{site.baseurl}}{{page.url}}" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Share on Twitter"><span class="fa fa-2x fa-twitter-square"></span></a>&nbsp;&nbsp;
+			<a href="https://www.facebook.com/sharer.php?u={{ site.data.props.mainurl }}{{site.baseurl}}{{page.url}}" target="_blank"  data-toggle="tooltip" data-placement="bottom" title="Share on Facebook"><span class="fa fa-2x fa-facebook-square"></span></a>&nbsp;&nbsp;
+			<a href="http://www.tumblr.com/share/" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Share on Tumblr"><span class="fa fa-2x fa-tumblr-square"></span></a>&nbsp;&nbsp;
+			<a href="http://www.linkedin.com/shareArticle?mini=true&url={{ site.data.props.mainurl }}{{site.baseurl}}{{page.url}}" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Share on LinkedIn"><span class="fa fa-2x fa-linkedin-square"></span></a>
+		</p>
+	</div>
+</div>

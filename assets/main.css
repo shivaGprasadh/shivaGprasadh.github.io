@@ -1,0 +1,136 @@
+/* All Pages */
+img {
+	display: block;
+	max-width:100%;
+	height:auto;
+}
+/*_layout/post.html*/
+#post-content-wrap h1{
+	margin-top:0px;
+	margin-bottom:20px;
+}
+#post-content-wrap p, #post-content-wrap li{
+	line-height:22px;
+	font-size:15px;
+}
+#post-content-wrap h1, #post-content-wrap h2, #post-content-wrap h3, #post-content-wrap h4, #post-content-wrap h5, #post-content-wrap h6, #post-content-wrap img, #post-content-wrap p, #post-content-wrap ul, #post-content-wrap ol, #post-content-wrap pre{
+	margin-bottom:20px;
+}
+/*/blog/archive.html*/
+#archive-header{
+	margin-bottom:30px;
+}
+#archive-header a:hover, .archive-post-wrap a:hover, .sidebar-header a, .sidebar-category a{
+	text-decoration: none;
+}
+/*_includes/blog_sidebar.html*/
+#sidebar-categories{
+	padding-left: 0px;
+}
+#sidebar-categories li{
+	list-style-type: none;
+	line-height:30px;
+}
+#blog-sidebar{
+	margin-top:20px;
+}
+/*_layouts/default.html*/
+#footer{
+	background-color: rgb(248, 248, 248);
+	border-top-color: rgb(231, 231, 231);
+	color: rgb(119, 119, 119);
+}
+#footer-content-wrap{
+	margin-top:40px;
+	margin-bottom:40px;
+}
+/* Customization for home site */
+/* Sidebar Affix - index.html */
+@media (min-width: 979px) {
+  #page-sidebar.affix-top {
+    position: static;
+  	margin-top:30px;
+  	width:228px;
+  }
+  
+  #page-sidebar.affix {
+    position: fixed;
+    top:70px;
+    width:228px;
+  }
+}
+
+#page-sidebar li.active {
+  border:0 #eee solid;
+  border-left-width:5px;
+  font-weight: bold;
+}
+
+/* General */
+.container-inner{
+	padding-left: 0px;
+}
+.page-section h2{
+	text-align: center;
+}
+.page-section {
+	line-height:22px;
+	font-size:15px;
+}
+.page-section a:hover{
+	text-decoration: none;
+}
+.page-section-list{
+	list-style: none;
+}
+.page-section-current-text{
+	color: #31708f;
+	font-weight: bold;
+	text-align: center;
+	margin-top:20px;
+}
+.page-section-current{
+	background-color: #d9edf7;
+	border-color: #bce8f1;
+	color:#31708f;
+}
+/*About section*/
+blockquote{
+	font-style: italic;
+	margin-top: 7%;
+}
+#index-about-header{
+	margin-top:7%;
+}
+#index-about-body{
+	margin-top:4%;
+}
+#about{
+	margin-bottom:7%;
+}
+/*Get in Touch Section*/
+#index-contact-social-list li{
+	padding-left:20px;
+}
+/*Contact form bottom margin*/
+#contact-form{
+	margin-bottom:20px;
+}
+code { 
+	font-size:14px; 
+}
+
+pre	{
+	white-space:pre-wrap;
+	padding:20px;
+	background-color: #272822;
+	overflow:auto;
+	border-radius: 3px;
+	background: #272822;
+	font-size: 13px;
+	line-height: 1.5em;
+	font-weight: 500;
+	color: #d0d4d7;
+}
+
+/* End of index.html CSS 
