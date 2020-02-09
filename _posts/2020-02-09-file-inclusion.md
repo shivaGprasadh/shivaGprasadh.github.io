@@ -2,8 +2,6 @@
 title: Local file inclusion & remote file inclusion
 published: true
 ---
-
-# [](#header-1) Local file inclusion & remote file inclusion
  
 Hi buddies, Sometime you might be confused about the difference between Arbitrary file access, Local file inclusion and Remote file inclusion attacks. Lets discuss about the differences.  
  
@@ -21,7 +19,6 @@ eg. http://vulnerableWebSite.com/apps/index.php?file=../../../../tmp/shell.php
 In this traversal arbitrary file access issue, the contents of shell.php will be displayed, not executed.
 
 * * *
- 
  
 ## [](#header-2) Local File Inclusion (LFI) attack
  
