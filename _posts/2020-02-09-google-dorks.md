@@ -54,12 +54,19 @@ To find lists of email, fetch excel files by following dorks, ```filetype:xls in
  We can filter results by specifying domain name, like site:.edu with above query.
  
 To find subdomains: ```site:google.com - www.google.com```
+
 To search for error pages: ```site:domain.com intitle:error|warning```
+
 To search for logins:  ```site:domain.com login|logon or inurl:login.jsp intitle:login```
+
 To search for admin pages:  ```site:domain.com admin|administrator```
+
 To display all files in the domain except those with an html extension:  ```site:domain.com -ext:html```
+
 To search for user list:  ```site:domain.com inurl:admin inurl:uselist```
+
 To search vulnerable/hacked web servers: ```inurl:/proc/self/cwd```
+
 To find SSH private keys, ```intitle:index.of id_rsa -id_rsa.pub```
  
 Not only http based servers, we can also indexes open FTP servers.
