@@ -22,15 +22,15 @@ A strong CSP provides an effective second layer of protection against various ty
 
 **Special Directive** 
 
-'none'  No URLs match.
+'none' - No URLs match.
 ***
-'self'  Refers to the origin site with the same scheme and port number.
+'self' - Refers to the origin site with the same scheme and port number.
 ***
-'unsafe-inline'  Allows the usage of inline scripts or styles.
+'unsafe-inline' - Allows the usage of inline scripts or styles.
 ***
-'unsafe-eval'  Allows the usage of eval in scripts.
+'unsafe-eval' - Allows the usage of eval in scripts.
 ***
-'strict-dynamic'  Informs the browser to trust scripts originating from a root trusted script.
+'strict-dynamic' - Informs the browser to trust scripts originating from a root trusted script.
 ***
 
 
