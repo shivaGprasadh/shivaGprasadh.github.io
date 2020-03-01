@@ -12,6 +12,7 @@ Its an another HTTP security header. you can specify the Content Security Policy
 
 A strong CSP provides an effective second layer of protection against various types of vulnerabilities, such as cross-site scripting vulnerabilities, clickjacking, mixed content security issues, protocol downgrading and any other kind of code injections... A CSP can be used to enforce the use of Subresource Integrity (SRI).
 
+
 **Content Security Policy can be activated by following methods,**
 
 1. Content-Security-Policy HTTP response header field.
@@ -30,49 +31,49 @@ A strong CSP provides an effective second layer of protection against various ty
 
 ## [](#header-4)Basic CSP Policy
 
-###### Header 6 ######To allow the content which come from the site's own origin only (this excludes subdomains),
+**To allow the content which come from the site's own origin only (this excludes subdomains),**
 
 ```
 Content-Security-Policy: default-src 'self'
 ```
 
-###### Header 6 ######To allow content from a trusted domain and all its subdomains (it doesn't have to be the same domain that the CSP is set on.)
+**To allow content from a trusted domain and all its subdomains (it doesn't have to be the same domain that the CSP is set on.)**
 
 ```
 Content-Security-Policy: default-src 'self' *.domain.com
 ```
 
-###### Header 6 ######To allow images from any origin, to allow audio or video ( media files ) from trusted providers, and all scripts allowed from only a specific server,
+**To allow images from any origin, to allow audio or video ( media files ) from trusted providers, and all scripts allowed from only a specific server,**
 
 ```
 Content-Security-Policy: default-src 'self'; img-src *; media-src mediaserver1.com mediaserver2.com; script-src scripts.domain.com
 ```
 
-###### Header 6 ######To ensure that all its content is loaded using TLS, in order to prevent attackers from eavesdropping on requests.
+**To ensure that all its content is loaded using TLS, in order to prevent attackers from eavesdropping on requests.**
 
 ```
 Content-Security-Policy: default-src https://banking.domain.com
 ```
 
-###### Header 6 ######To enabling violation reporting and to deliver a report to specific location,
+**To enabling violation reporting and to deliver a report to specific location,**
 
 ```
 Content-Security-Policy: default-src 'self'; report-uri http://collector.domain.com/report_collector.cgi
 ```
 
-###### Header 6 ######To prevent mixed content ,
+**To prevent mixed content ,**
 
 ```
 Content-Security-Policy: block-all-mixed-content;
 ```
 
-###### Header 6 ######If migrated from HTTP to HTTPS, the following directive will ensure that all requests will be sent over HTTPS with no fallback to HTTP,
+**If migrated from HTTP to HTTPS, the following directive will ensure that all requests will be sent over HTTPS with no fallback to HTTP,**
 
 ```
 Content-Security-Policy: upgrade-insecure-requests;
 ```
 
-###### Header 6 ######To prevent clickjacking, 
+**To prevent clickjacking,** 
 
 ```
 Content-Security-Policy: frame-ancestors 'none';
@@ -122,4 +123,3 @@ PHP code to implement this is as follows,
 ```js
 header("Content-Security-Policy: script-src 'self' 'sha256-".base64_encode(hash('sha256', 'alert("shivaGprasadh");', true))."'");
 ```
-
