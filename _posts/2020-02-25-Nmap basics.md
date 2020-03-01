@@ -155,7 +155,7 @@ It is used to find out what software version is running on the target host and o
 
 It is an advance scan that provides complete anonymity while scanning, where Nmap doesn’t send the packets from your real IP address. Nmap uses another host from the target network to send the packets.
 
-# nmap -sI zombie_host target_host
+**nmap -sI zombie_host target_host**
 
 ```console
 # nmap -sI 192.168.1.10 192.168.1.1
