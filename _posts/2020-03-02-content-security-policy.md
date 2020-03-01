@@ -35,49 +35,49 @@ A strong CSP provides an effective second layer of protection against various ty
 
 **To allow the content which come from the site's own origin only (this excludes subdomains),**
 
-```
+```console
 Content-Security-Policy: default-src 'self'
 ```
 
 **To allow content from a trusted domain and all its subdomains (it doesn't have to be the same domain that the CSP is set on.)**
 
-```
+```console
 Content-Security-Policy: default-src 'self' *.domain.com
 ```
 
 **To allow images from any origin, to allow audio or video ( media files ) from trusted providers, and all scripts allowed from only a specific server,**
 
-```
+```console
 Content-Security-Policy: default-src 'self'; img-src *; media-src mediaserver1.com mediaserver2.com; script-src scripts.domain.com
 ```
 
 **To ensure that all its content is loaded using TLS, in order to prevent attackers from eavesdropping on requests.**
 
-```
+```console
 Content-Security-Policy: default-src https://banking.domain.com
 ```
 
 **To enabling violation reporting and to deliver a report to specific location,**
 
-```
+```console
 Content-Security-Policy: default-src 'self'; report-uri http://collector.domain.com/report_collector.cgi
 ```
 
 **To prevent mixed content ,**
 
-```
+```console
 Content-Security-Policy: block-all-mixed-content;
 ```
 
 **If migrated from HTTP to HTTPS, the following directive will ensure that all requests will be sent over HTTPS with no fallback to HTTP,**
 
-```
+```console
 Content-Security-Policy: upgrade-insecure-requests;
 ```
 
 **To prevent clickjacking,** 
 
-```
+```console
 Content-Security-Policy: frame-ancestors 'none';
 ```
 
@@ -92,7 +92,7 @@ By default CSP disables any unsigned JavaScript code placed inline in the HTML s
 
 A nonce (a number) is similar to CSRF token but for specific resources. It is activated by using nonce-$random_string in the HTTP response header. 
 
-```
+```console
 Content-Security-Policy: script-src 'self' 'nonce-hs4gltKzf7Lz3PdC3RIxVb5S5T5nSG7j5h0oR6hSFII='
 ```
 
@@ -110,7 +110,7 @@ With the above CSP setting, all script blocks without a nonce are not executed. 
 
 CSP can be configured to load resources if only it match defined hashes. Example is, 
 
-```
+```console
 Content-Security-Policy: script-src 'self' 'sha256-x5l+Ty8LLH9VLl/KvxWBTnAcPFlUXOqpbWgt0yJHkDo='
 ```
 
