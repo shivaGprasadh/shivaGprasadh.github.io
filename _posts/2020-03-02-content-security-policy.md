@@ -23,7 +23,7 @@ A strong CSP provides an effective second layer of protection against various ty
 **Special Directive** 
 
 | Directive name | Action |
-|----------------|--------|
+|----------------|--------:|
 | 'none' | No URLs match.|
 | 'self' | Refers to the origin site with the same scheme and port number.|
 | 'unsafe-inline' | Allows the usage of inline scripts or styles.|
