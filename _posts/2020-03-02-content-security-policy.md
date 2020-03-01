@@ -1,6 +1,6 @@
 ---
 title: Content Security Policy
-categories: mitigations
+categories: Mitigations
 date: 2020-03-02
 author: shiva G prasadh
 published: true
