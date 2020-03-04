@@ -7,6 +7,9 @@ published: true
 ---
  
 Sometimes you might be confused when you think about the difference between Arbitrary file access, Local file inclusion and Remote file inclusion attacks. In a File Inclusion, Attackers run their own code on a vulnerable website. If the attacker can include their own malicious code on a web page, it is possible to "convince" a PHP script to include a remote file instead of a presumably trusted file from the local file system. Lets discuss about the differences.  
+
+
+* * * 
  
 ### [](#header-3) Directory Traversal Attack
  
