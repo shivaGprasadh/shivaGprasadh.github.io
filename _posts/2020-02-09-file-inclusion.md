@@ -8,7 +8,7 @@ published: true
  
 Sometime you might be confused when you think about the difference between Arbitrary file access, Local file inclusion and Remote file inclusion attacks. Lets discuss about the differences.  
  
-### [](#header-5) Directory Traversal Attack
+### [](#header-3) Directory Traversal Attack
  
 Directory traversal attacks that allowed an attacker to ‘traverse’ outside an intended directory to access a file or directory that was not intended.
 eg. http://vulnerableWebSite.com/apps/index.php?file=../../../../../../etc/passwd
