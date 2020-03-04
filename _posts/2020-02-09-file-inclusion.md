@@ -28,6 +28,19 @@ In this traversal arbitrary file access issue, the contents of shell.php will be
 It often exhibit the same trait as directory traversal attacks, the attack typically involves a relative (e.g. ../../) or absolute path (e.g. &file=/path/to/file) to call a specific file on the system. The difference is in how the application handles the request. Instead of displaying the contents of the file like above, it will include the file as if it is an executable script. This means that arbitrary code, but limited to what is already on the file system, will be executed with the same privileges as the web application and/or web server.  
 Basically, the difference is that with a file inclusion vulnerability, the resource is loaded and executed in the context of the current application. A directory traversal vulnerability on the other hand, only gives you the ability to read the resource.
 
+```
+	<?php
+	$template =$_GET['template'];
+	include("/".$template .".php");			
+	?>
+```
+
+From Code, Attacker can assign template to be "../../../../etc/passwd%00". It causes the attacker to read a content from /etc/passwd.
+
+```
+[URL] http://vulnerableWebSite.com/index.php?template=../../../../etc/passwd%00
+```
+
 * * *
  
 ### [](#header-3) Remote File Inclusion (RFI) attack
