@@ -6,7 +6,7 @@ author: shiva G prasadh
 published: true
 ---
  
-Sometime you might be confused when you think about the difference between Arbitrary file access, Local file inclusion and Remote file inclusion attacks. Lets discuss about the differences.  
+Sometimes you might be confused when you think about the difference between Arbitrary file access, Local file inclusion and Remote file inclusion attacks. Lets discuss about the differences.  
  
 ### [](#header-3) Directory Traversal Attack
  
